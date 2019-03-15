@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>发送邮件</title>
+<style type="text/css">
+body{
+  margin:0px;
+  padding:0px;
+  text-align:center;
+}
+#senddiv{
+  margin:0 auto;
+  margin-top:120px;
+  width:480px;
+  border:1px silver solid;
+  text-align:center;
+}
+
+</style>
+</head>
+<body>
+	<form id="senddiv" action="/email/sendbyattribute" method="post">
+		<table>
+			<tr>
+				<td>邮件标题:</td>
+				<td><input type="text" name="mailTitle" /></td>
+			</tr>
+			<tr>
+				<td>邮件内容:</td>
+				<td><input type="text" name="mailContent" /></td>
+			</tr>
+			<tr>
+				<td>接收者:</td>
+				<td><input type="text" name="recipients" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="2"><input type="submit"  value="发送" /></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
